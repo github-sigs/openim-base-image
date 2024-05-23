@@ -1,5 +1,5 @@
 # Production Stage
-FROM alpine:3.18
+FROM alpine:3.20
 
 LABEL maintainer="info@openim.io" \
       org.opencontainers.image.source=https://github.com/openim-sigs/openim-base-image \
