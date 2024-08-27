@@ -33,6 +33,7 @@ jobs:
       - uses: dessant/lock-threads@v4
         if: secrets.BOT_GITHUB_TOKEN != ''
         with:
+          # Ensure that the BOT_GITHUB_TOKEN secret is set to a valid GitHub token
           github-token: ${{ secrets.BOT_GITHUB_TOKEN }}
           issue-inactive-days: '365'
           exclude-issue-created-before: ''
