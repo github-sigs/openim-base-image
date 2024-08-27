@@ -33,6 +33,8 @@ jobs:
       - uses: dessant/lock-threads@v4
         if: secrets.BOT_GITHUB_TOKEN != ''
         with:
+# The BOT_GITHUB_TOKEN secret must be set in the repository settings and contain a valid GitHub token.
+# If the secret is not set or contains an invalid token, the workflow will fail with a "Bad credentials" error.
           github-token: ${{ secrets.BOT_GITHUB_TOKEN }}
           issue-inactive-days: '365'
           exclude-issue-created-before: ''
