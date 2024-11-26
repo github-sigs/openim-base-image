@@ -33,6 +33,8 @@ jobs:
       - uses: dessant/lock-threads@v4
         if: secrets.BOT_GITHUB_TOKEN != ''
         with:
+          # Ensure the BOT_GITHUB_TOKEN secret is correctly set in the repository settings.
+          # If the secret is missing or outdated, create or update it with a valid GitHub token.
           github-token: ${{ secrets.BOT_GITHUB_TOKEN }}
           issue-inactive-days: '365'
           exclude-issue-created-before: ''
